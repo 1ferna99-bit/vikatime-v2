@@ -1,8 +1,4 @@
-// next.config.ts
-import type { NextConfig } from 'next'
+/** @type {import('next').NextConfig} */
+const nextConfig = {}
 
-const nextConfig: NextConfig = {
-  // Vercel-ready
-}
-
-export default nextConfig
+module.exports = nextConfig
