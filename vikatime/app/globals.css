@@ -1,0 +1,49 @@
+/* app/globals.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --cream:       #FDFAF5;
+  --cream-dark:  #F5EFE2;
+  --orange:      #E8611A;
+  --orange-light:#FFF0E6;
+  --orange-dark: #C44F10;
+  --green:       #2E7D5A;
+  --green-light: #E8F5EE;
+  --stone-text:  #2C2416;
+}
+
+@layer base {
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: var(--font-body), sans-serif;
+    background-color: var(--cream);
+    color: var(--stone-text);
+  }
+
+  h1, h2, h3 {
+    font-family: var(--font-display), serif;
+  }
+}
+
+@layer utilities {
+  .font-display { font-family: var(--font-display), serif; }
+  .font-body    { font-family: var(--font-body), sans-serif; }
+
+  .bg-cream      { background-color: var(--cream); }
+  .bg-cream-dark { background-color: var(--cream-dark); }
+  .text-orange   { color: var(--orange); }
+  .bg-orange     { background-color: var(--orange); }
+  .border-orange { border-color: var(--orange); }
+}
+
+/* Animaciones suaves */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.animate-fade-up {
+  animation: fadeUp 0.4s ease forwards;
+}
